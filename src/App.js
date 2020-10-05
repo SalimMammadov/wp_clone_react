@@ -10,14 +10,11 @@ function App({user}) {
 
   return (
     <div className="app">
-      
       {!user ? (
        <Login></Login>
       ) : (
         <div>
-          {/* <small style={{ color: "green" }}>
-        From <b>Salim Mammadov </b>
-      </small> */}
+         
         <div className="app__body">
         <Router>
         <Sidebar />
@@ -31,9 +28,12 @@ function App({user}) {
           </Switch>
         </Router>
       </div>
+      <small className="logo">
+        From <b>Salim Mammadov </b>
+      </small>
       </div>
       )}
-     
+       
     </div>
   );
 }
