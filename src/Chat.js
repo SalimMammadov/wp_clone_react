@@ -24,9 +24,21 @@ function Chat({user}) {
 
   useEffect(()=>{
     if(roomId){
+
+      
       db.collection('rooms').doc(roomId).onSnapshot((snapshot)=>
+      {
+        console.log(snapshot)
+        if(snapshot.exists)
         setRoomName(snapshot.data().name)
+        else {
+          setRoomName("")
+          setMessages([])
+        }
+      } 
       );
+
+
 
     db.collection('rooms')
     .doc(roomId)

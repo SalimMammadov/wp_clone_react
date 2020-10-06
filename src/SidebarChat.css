@@ -13,9 +13,15 @@ a {
 }
 .sidebarChat__info {
     margin-left :15px;
+    flex : 0.9
+
 }
 
 .sidebarChat__info > h2 {
         font-size:16px;
         margin-bottom : 8px;
+}
+
+.sidebarChat__remove {
+    flex : 0.1
 }
